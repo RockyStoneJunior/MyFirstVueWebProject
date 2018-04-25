@@ -138,14 +138,13 @@
 前后端分离后，由于服务端和前端的开发环境处于2台不同的机器上，前端的异步请求需要代理到后端机器中。
 联调的时候，只需通过 proxy 参数运行 dev 脚本即可，所有 mock 目录下定义的接口将会转发到 proxy 参数指定的机器：
 
-    # 172.16.36.90:8083 为后端机器的环境地址
-    npm run dev -- --proxy=172.16.36.90:8083
+    # 192.168.1.1:8083 为后端机器的环境地址
+    npm run dev -- --proxy=192.168.1.1:8083
 
 这样，如果 mock 目录下有定义了接口 /api/hello ，将会转发到 http://172.16.36.90/:8083/api/hello
 
 ## 相关资源
 
-- QQ群：568815621
 - vue.js 官网：[https://vuejs.org/](https://vuejs.org/)
 - vue.js 中文网： [http://vuefe.cn/](http://vuefe.cn/)
 - vue-router 文档：[http://router.vuejs.org/zh-cn/index.html/](http://router.vuejs.org/zh-cn/index.html)
