@@ -12,11 +12,12 @@
     "test": "npm run unit && npm run e2e"
   },
   "dependencies": {
+    "es6-promise": "^4.0.5",
+    "node-sass": "^4.8.3",
     "vue": "^2.0.1",
-    "vuex": "^2.0.0",
     "vue-router": "^2.0.1",
-    "whatwg-fetch": "^1.0.0",
-    "es6-promise": "^4.0.5"
+    "vuex": "^2.0.0",
+    "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -61,7 +62,6 @@
     "lolex": "^1.4.0",
     "mocha": "^3.1.0",
     "nightwatch": "^0.9.8",
-    "node-sass": "^3.10.1",
     "opn": "^4.0.2",
     "optimist": "^0.6.1",
     "ora": "^0.3.0",
