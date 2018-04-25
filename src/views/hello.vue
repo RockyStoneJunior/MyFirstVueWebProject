@@ -2,7 +2,8 @@
   <div class="hello">
     <c-title :text="title"></c-title>
     <img class="logo" src="../assets/images/logo.png">
-    <p class="welcome">欢迎使用 vue</p>
+    <p class="welcome">Rocky 欢迎使用 vue</p>
+    <p>{{message}}</p>
     <div v-html="content"></div>
   </div>
 </template>
@@ -15,19 +16,22 @@
   export default {
     data () {
       return {
-        title: 'Hello Vue!',
+        title: 'Hello Rocky Stone!',
         content: ''
       }
     },
     methods: {
       async getContent () {
         const response = await fetch('/api/hello');
+
+        console.log(response)
+
         this.content = await response.text();
       }
     },
     mounted () {
-      this.$store.commit('message', '欢迎使用 vue！');
-      this.getContent();
+        this.$store.commit('message', '欢迎光临！');
+        this.getContent();
     },
 
     components: {cTitle}
@@ -48,5 +52,9 @@
       color: #42b983;
       text-decoration: none;
     }
+  }
+
+  .welcome{
+    color: #42b983;
   }
 </style>

@@ -4,6 +4,7 @@
  */
 const Hello = r => require(['views/hello'], r);
 const NotFound = r => require(['views/notfound'], r);
+const Headertop = r => require(['views/header'], r);
 
 // 根目录
 const rootPath = '';
@@ -11,13 +12,20 @@ const rootPath = '';
 // 页面路由
 const routes = [
   {path: '', redirect: {name: 'hello'}},
-  {path: '/hello', component: Hello, name: 'hello'}
+  {path: '/hello',
+      components: {
+      default:Hello,
+      headers:Headertop
+      },
+      name: 'hello'
+  },
+  {path: '/header', component: Headertop, name: 'headertop'}
 ].map(route => {
   route.path = rootPath + route.path;
   return route;
 });
 
 // 404 页
-routes.push({path: '*', component: NotFound, name: 'notfound'});
+routes.push({path: '*', components:{ default:NotFound,headers:Headertop}, name: 'notfound'});
 
 export default routes;
