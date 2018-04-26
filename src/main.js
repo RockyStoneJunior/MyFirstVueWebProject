@@ -10,6 +10,7 @@ import storeOption from './vuex/store';
 
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
+import 'element-ui/lib/theme-chalk/tree.css'
 
 Vue.use(Vuex);
 Vue.use(VueRouter);

@@ -105,7 +105,7 @@
                         this.$router.push("/hello");
                         break;
                     case "3":
-                        this.$router.push("/aboutus/company");
+                        this.$router.push("/tree");
                         break;
                     case "4":
                         this.$router.push("/joinus/mymessage");
@@ -235,9 +235,9 @@
 
     }
     .headers {
-        // border-bottom: 2px solid #4CAB42;
+        border-bottom: 1px solid #DFDFDF;//#4CAB42;
         height: 60px;
-        box-shadow: 8px 0px 20px rgba(76, 171, 66, 0.5);
+        //box-shadow: 8px 0px 20px rgba(76, 171, 66, 0.5);
         background: #fff;
         z-index: 20;
         position: fixed;//relative;//absolute;
