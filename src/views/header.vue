@@ -19,7 +19,7 @@
                             <el-menu-item index="3">
                                 关于我们
                             </el-menu-item>
-                            <el-menu-item index="4" v-if='loginStatue'>
+                            <el-menu-item index="4">
                                 厂家入驻
                             </el-menu-item>
                             <el-menu-item index="5">
@@ -108,10 +108,10 @@
                         this.$router.push("/tree");
                         break;
                     case "4":
-                        this.$router.push("/joinus/mymessage");
+                        this.$router.push("/test");
                         break;
                     case "5":
-                        this.$router.push("/certificate");
+                        this.$router.push("/test");
                         break;
                     default:
                         break;

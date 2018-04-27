@@ -6,6 +6,7 @@ const Hello = r => require(['views/hello'], r);
 const NotFound = r => require(['views/notfound'], r);
 const Headertop = r => require(['views/header'], r);
 const Tree = r => require(['views/tree'], r);
+const Test = r => require(['views/test'], r);
 
 // 根目录
 const rootPath = '';
@@ -21,7 +22,8 @@ const routes = [
       name: 'hello'
   },
   {path: '/header', component: Headertop, name: 'headertop'},
-  {path: '/tree', component: Tree, name: 'tree'}
+  {path: '/tree', components: {default:Tree,headers:Headertop}, name: 'tree'},
+  {path: '/test',components: {default:Test,headers:Headertop}, name: 'tree'}
 ].map(route => {
   route.path = rootPath + route.path;
   return route;

@@ -7,7 +7,7 @@
 </template>
 <style lang="scss" rel="stylesheet/scss">
   html {
-    height: 100%;
+    //height: 100%;
   }
 
   body {
@@ -19,7 +19,7 @@
 
   #app {
     color: #2c3e50;
-    margin-top: -100px;
+    margin-top: 100px;
     max-width: 600px;
     font-family: Source Sans Pro, Helvetica, sans-serif;
     text-align: center;
