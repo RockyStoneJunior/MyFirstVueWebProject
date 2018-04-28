@@ -14,7 +14,7 @@
                                 首页
                             </el-menu-item>
                             <el-menu-item index="2">
-                                新闻动态
+                                富文本
                             </el-menu-item>
                             <el-menu-item index="3">
                                 关于我们
@@ -102,7 +102,7 @@
                         this.$router.push("/");
                         break;
                     case "2":
-                        this.$router.push("/hello");
+                        this.$router.push("/richTextor");
                         break;
                     case "3":
                         this.$router.push("/tree");

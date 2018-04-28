@@ -3,6 +3,7 @@
   <div id="app">
     <router-view name='headers'></router-view>
     <router-view></router-view>
+    <!--<router-view name='footers'></router-view>-->
   </div>
 </template>
 <style lang="scss" rel="stylesheet/scss">
@@ -20,7 +21,7 @@
   #app {
     color: #2c3e50;
     margin-top: 100px;
-    max-width: 600px;
+    max-width: 800px;
     font-family: Source Sans Pro, Helvetica, sans-serif;
     text-align: center;
     a {

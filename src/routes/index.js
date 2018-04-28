@@ -7,6 +7,8 @@ const NotFound = r => require(['views/notfound'], r);
 const Headertop = r => require(['views/header'], r);
 const Tree = r => require(['views/tree'], r);
 const Test = r => require(['views/test'], r);
+const Footer = r => require(['views/footer'], r);
+const RichTextor = r => require(['views/richTextor'], r);
 
 // 根目录
 const rootPath = '';
@@ -17,13 +19,15 @@ const routes = [
   {path: '/hello',
       components: {
       default:Hello,
-      headers:Headertop
+      headers:Headertop,
+          footers:Footer
       },
       name: 'hello'
   },
   {path: '/header', component: Headertop, name: 'headertop'},
-  {path: '/tree', components: {default:Tree,headers:Headertop}, name: 'tree'},
-  {path: '/test',components: {default:Test,headers:Headertop}, name: 'tree'}
+    {path: '/richTextor', components: {default:RichTextor,headers:Headertop,footers:Footer}, name: 'RichTextor'},
+  {path: '/tree', components: {default:Tree,headers:Headertop,footers:Footer}, name: 'tree'},
+  {path: '/test',components: {default:Test,headers:Headertop,footers:Footer}, name: 'tree'}
 ].map(route => {
   route.path = rootPath + route.path;
   return route;
